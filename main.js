@@ -7,7 +7,7 @@ async function renderChart() {
     const graphSelector = document.querySelector("canvas#chart");
     const graphPos = graphSelector.getBoundingClientRect();
 
-    var gradientStroke = ctx.createLinearGradient(0, graphPos.top, 0, graphPos.bottom + graphPos.width * 2);
+    var gradientStroke = ctx.createLinearGradient(0, graphPos.top, 0, graphPos.bottom + graphPos.width);
     gradientStroke.addColorStop(0, "#1f428780");
     gradientStroke.addColorStop(1, "#ffffff80");
     console.log(graphPos);
