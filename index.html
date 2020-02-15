@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script> <!-- Chart.js library -->
+    <!-- <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script> -->
+
+    <title>New Project</title>
+</head>
+
+<body>
+
+    <h1>Statistique</h1>
+    <div class="containerGraph">
+        <!-- Div pour obtenir un arrondie complet -->
+        <div class="topGraph"></div> 
+
+        <div class="dataGraph">
+            <canvas id="chart"></canvas>
+        </div>
+
+        <div class="bottomGraph">
+            <span class="elemBottom">
+                <h3>
+                    148
+                </h3>
+                <p>
+                    Nombre de paris
+                </p>
+            </span>
+            <span class="verticalLine"></span>
+            <span class="elemBottom">
+                <h3>
+                    8.34%
+                </h3>
+                <p>
+                    ROC
+                </p>
+            </span>
+            <span class="verticalLine"></span>
+            <span class="elemBottom">
+                <h3>
+                    12.34%
+                </h3>
+                <p>
+                    ROI
+                </p>
+            </span>
+            <span class="verticalLine"></span>
+            <span class="elemBottom">
+                <h3>
+                    +273.39
+                </h3>
+                <p>
+                    Bénéfices
+                </p>
+            </span>
+            <span class="verticalLine"></span>
+            <span class="elemBottom">
+                <h3>
+                    1.85
+                </h3>
+                <p>
+                    Côte moyenne
+                </p>
+            </span>
+        </div>
+    </div>
+    <h1>Suivi</h1>
+    <div class="containerSorting"></div>
+    <div class="paramSorting"></div>
+    <div class="containerTable"></div>
+    <div class="bottomTable"></div>
+
+
+    <script src="main.js"></script>
+</body>
+
+</html>
