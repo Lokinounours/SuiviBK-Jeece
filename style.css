@@ -1,40 +1,50 @@
+:root {
+    --lightBlue: #F2F6FF;
+    --lightGrey: #fafafa;
+    --grey: #717171;
+    --white: #ffffff;
+    --deepBlue: #1e3687;
+    --mainBlue: #538efe;
+    --green: #60D981;
+    --red: #fe606d;
+}
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background: #f0f0f0;
+    background: var(--lightGrey);
     font-size: 18px;
-    font-family: 'Poppins';
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
 }
 
 canvas#chart {
-    background-color: #ffffff;
+    background-color: var(--white);
 }
 
 .containerGraph {
-    width: 60%;
+    width: 40%;
     margin: 1em auto;
     border-radius: 10px;
-    background-color: #ffffff;
+    background-color: var(--white);
     box-shadow: 10px 10px 15px #00000020;
 }
 
 h1 {
-    color: #538efe;
+    color: var(--mainBlue);
     text-align: center;
     font-size: 1.8em;
 }
 
 .topGraph {
     height: 10px;
-    background-color: #ffffff;
+    background-color: var(--white);
     border-radius: 10px 10px 0 0;
 }
 
 
 .bottomGraph {
     height: 100px;
-    background-color: #F2F6FF; 
+    background-color: var(--lightBlue); 
     margin: 0 auto;
     border-radius: 0 0 10px 10px;
 
@@ -48,24 +58,89 @@ h1 {
 }
 
 .elemBottom h3 {
-    background-color: #F2F6FF; 
+    background-color: var(--lightBlue); 
     font-weight: bolder;
     font-size: 1.5em;
-    color: #1e3687;
+    color: var(--deepBlue);
 }
 
 .elemBottom p {
-    background-color: #F2F6FF; 
+    background-color: var(--lightBlue); 
     font-size: 0.8em;
-    color: #fe606d;
+    color: var(--red);
 }
 
 .verticalLine {
     height: 50px;
     width: 1px;
-    background: #1e3687;
+    background: var(--deepBlue);
     border-radius: 3px;
 }
+
+.containerSuivi table {
+    width: 60%; 
+    border-collapse:collapse;
+    margin: 1em auto;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 10px 10px 15px #00000020;
+}
+
+.containerTable {
+    text-align: center;
+}
+
+.containerTable th{
+    background-color: var(--lightBlue);
+}
+
+.containerTable td {
+    background-color: var(--white);
+}
+
+th, td {
+    border-bottom: 1px solid var(--grey);
+}
+
+tbody tr:last-child td{
+    border-bottom: none;
+}
+
+th {
+    color: var(--mainBlue);
+    height: 3em;
+    font-size: 0.8em;
+}
+
+td {
+    color: var(--grey);
+    height: 4em;
+    font-size: 0.6em;
+    font-weight: lighter;
+}
+
+.posValue {
+    color: var(--green);
+}
+
+.negValue {
+    color: var(--red);
+}
+
+.bottomTable {
+    height: 50px;
+    background: blue;
+}
+
+
+
+
+
+
+.espaceTMP {
+    height: 500px;
+}
+
 
 /* Medium devices (tablets, 768px and up) */
 /* @media (min-width: 768px) { ... } */
