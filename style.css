@@ -13,26 +13,42 @@
     padding: 0;
     box-sizing: border-box;
     background: var(--lightGrey);
-    font-size: 18px;
+    font-size: 22px;
     font-family: 'Poppins', Arial, Helvetica, sans-serif;
 }
-
+/* Pour surpasser la transparance du graph */
 canvas#chart {
     background-color: var(--white);
 }
+/* Titre -> Statistique et Suivi */
+h1 {
+    margin-top: 5em;
+    color: var(--mainBlue);
+    text-align: center;
+    font-size: 1.5em;
+}
 
+.nextImg > i {
+    width: 100%;
+    text-align: center;
+    color: var(--deepBlue);
+    font-size: 3em;
+    transform: rotate(90deg);
+    background: transparent;
+}
+
+.shadow {
+    /* Soit on prend cette version de shadow */
+    box-shadow: 0em 0em 1em #00000020;
+    /* Soit on prend la même version que le design indiqué mais dans ce cas, on perçoit mal les couleurs
+    Il faudrait assombrir un peu le bleu clair */
+}
+/* Section Graph */
 .containerGraph {
-    width: 40%;
+    width: 65%;
     margin: 1em auto;
     border-radius: 10px;
     background-color: var(--white);
-    box-shadow: 10px 10px 15px #00000020;
-}
-
-h1 {
-    color: var(--mainBlue);
-    text-align: center;
-    font-size: 1.8em;
 }
 
 .topGraph {
@@ -77,13 +93,80 @@ h1 {
     border-radius: 3px;
 }
 
-.containerSuivi table {
-    width: 60%; 
-    border-collapse:collapse;
+/* Pre-Suivi */
+.preSuivi {
+    width: 80%;
+    margin: 1em auto;
+}
+
+.containerSorting {
+    margin: 1em 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid var(--grey);
+    border-bottom: 1px solid var(--grey); 
+}
+
+.containerSorting span {
+    color: var(--deepBlue);
+    display: flex;
+    margin: 0.5em;
+}
+
+.containerSorting div {
+    margin: 0 0.5em;
+    background: transparent;
+}
+
+.containerSorting i {
+    margin: auto 0;
+    transform: rotate(90deg);
+    color: var(--red);
+    background: transparent;
+}
+
+ .paramSorting {
+     display: flex;
+ }
+
+.pillButton {
+    height: 1em;
+    width: 4em;
+    display: flex;
+    background: linear-gradient(to right, rgb(30,50,132), rgb(66, 134, 244));
+    border-radius: 0.75em; /* Moyenne du padding top et bottom pour avoir l'effet "pill" */
+    margin: 0 1em;
+    padding: 0.5em 0 1em 0; /* padding bottom -> radius + padding top pour garder l'élément au center vertical*/
+}
+
+main {
+    font-size: 0.5em;
+    color: var(--white);
+    background: transparent;
+    margin: 0 auto 0 1em;
+}
+
+aside {
+    font-size: 0.5em;
+    font-weight: bolder;
+    float: left;
+    color: var(--white);
+    background: transparent;
+    margin-right: 1em;
+}
+
+/* Section Suivi */
+.containerSuivi {
+    width: 80%;
     margin: 1em auto;
     border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 10px 10px 15px #00000020;
+    overflow: hidden; /* Overflow permet de cacher les pixels ne devant pas être affiché, du au border-radius */
+}
+
+.containerSuivi table{
+    width: 100%; 
+    border-collapse:collapse; /* Permet de supprimer les lignes verticales entre chaque colonnes */
 }
 
 .containerTable {
@@ -98,40 +181,71 @@ h1 {
     background-color: var(--white);
 }
 
+td > img {
+    height: 20px;
+}
+
 th, td {
     border-bottom: 1px solid var(--grey);
 }
 
-tbody tr:last-child td{
+/* tbody tr:last-child td{ 
     border-bottom: none;
-}
+} */
 
 th {
     color: var(--mainBlue);
-    height: 3em;
-    font-size: 0.8em;
+    height: 4em;
+    font-size: 0.5em;
 }
 
 td {
     color: var(--grey);
-    height: 4em;
-    font-size: 0.6em;
+    height: 6em;
+    font-size: 0.5em;
     font-weight: lighter;
 }
 
 .posValue {
     color: var(--green);
+    font-weight: bolder;
 }
 
 .negValue {
     color: var(--red);
+    font-weight: bolder;
 }
 
 .bottomTable {
     height: 50px;
-    background: blue;
+    background: var(--white);
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* Correspond au numéros de pages */
+.bottomTable span {
+    height: 1.5em;
+    width: 1.5em;
+    margin: 0 0.3em;
+    border: 1px solid var(--mainBlue);
+    border-radius: 50%;
+    color: var(--mainBlue);
+    font-size: 0.7em;
+    font-weight: bolder;
+    text-align: center;
 }
 
+.bottomTable i {
+    color: var(--red);
+    margin: 0 1em;
+}
+/* Twist du premier chevron */
+.bottomTable i:first-child{
+    transform: rotate(180deg);
+    color: var(--red);
+}
 
 
 
@@ -140,8 +254,6 @@ td {
 .espaceTMP {
     height: 500px;
 }
-
-
 /* Medium devices (tablets, 768px and up) */
 /* @media (min-width: 768px) { ... } */
 

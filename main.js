@@ -8,6 +8,7 @@ async function renderChart() {
     const graphPos = graphSelector.getBoundingClientRect();
 
     var gradientStroke = ctx.createLinearGradient(0, graphPos.top, 0, graphPos.bottom + graphPos.width);
+    // Imprésision de calcul dans le cas ou le script est chargé avec un scroll de l'utilisateur non nul
     gradientStroke.addColorStop(0, "#1f428780");
     gradientStroke.addColorStop(1, "#ffffff80");
     console.log(graphPos);
