@@ -8,6 +8,7 @@
     --green: #60D981;
     --red: #fe606d;
 }
+
 * {
     margin: 0;
     padding: 0;
@@ -117,6 +118,7 @@ h1 {
 .containerSorting div {
     margin: 0 0.5em;
     background: transparent;
+    font-size: 0.7em;
 }
 
 .containerSorting i {
@@ -124,6 +126,7 @@ h1 {
     transform: rotate(90deg);
     color: var(--red);
     background: transparent;
+    /* font-size: 0.5em; */
 }
 
  .paramSorting {
